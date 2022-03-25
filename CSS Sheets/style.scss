@@ -1,0 +1,764 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap");
+
+$main-Color: #e2770c;
+$secondy-Color: #fff;
+$primary-Color: rgba(0, 0, 0, 0.897);
+$screen: 991px;
+$tablet: 768px;
+$phone: 450px;
+
+* {
+    font-family: "DM Sans", sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    border: none;
+    outline: none;
+    text-transform: capitalize;
+    text-decoration: none;
+    list-style: none;
+    transition: all 0.3s ease-in;
+    line-height: 1.5;
+    color: $primary-Color;
+
+    a {
+        color: $secondy-Color;
+    }
+}
+
+html {
+    font-size: 90%;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+body {
+    background: rgb(238, 174, 202);
+    background: radial-gradient(circle, rgba(238, 174, 202, 1) 0%, rgba(148, 187, 233, 1) 100%);
+    text-transform: capitalize;
+}
+
+// <=========== Uitilities Classes ===============>
+
+.btn-primary {
+    background: $main-Color;
+    font-size: 1rem;
+    color: $secondy-Color;
+    font-weight: 500;
+    border-radius: 0.4rem;
+    border: 0.1rem solid $main-Color;
+    outline: none;
+    padding: 0.5rem 1.2rem;
+    cursor: pointer;
+
+    &:hover {
+        background: none;
+    }
+}
+
+.btn-secondy {
+    background: none;
+    font-size: 1rem;
+    color: $primary-Color;
+    font-weight: 700;
+    border-radius: 0.4rem;
+    border: 0.1rem solid $primary-Color;
+    outline: none;
+    padding: 0.5rem 1.2rem;
+    cursor: pointer;
+
+    &:hover {
+        background: $main-Color;
+        border: 0.1rem solid $main-Color;
+    }
+}
+
+#menu-bars {
+    right: 1rem;
+    position: fixed;
+    font-size: 2rem;
+    color: #fff;
+    background: var(--main-Color);
+    border-radius: 0.5rem;
+    padding: 0.5rem 1rem;
+    display: none;
+    cursor: pointer;
+}
+
+.heading {
+    font-size: 3rem;
+    color: $primary-Color;
+    padding: 1rem 0;
+    text-align: center;
+    text-decoration: line-through;
+
+    span {
+        color: $main-Color;
+    }
+}
+// <======== UTILITY CLASSES ENDS =============>
+
+// <======== Header Section Style =============>
+
+header {
+    width: 100%;
+    height: 80px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: $primary-Color;
+    color: $secondy-Color;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    z-index: 1000;
+
+    .navbar {
+        a {
+            font-size: 1.1rem;
+            padding: 0.5rem 1rem;
+
+            &:hover {
+                color: $main-Color;
+                transition: 0.3s ease;
+            }
+        }
+
+        .contact__btn {
+            display: none;
+        }
+    }
+}
+// <======== Header Section Ends ============>
+
+// <======== Home Section Start ============>
+
+.home {
+    height: 100vh;
+    width: 100%;
+    background: url("../Images/Home_img.jpg") center center/cover;
+    background-repeat: no-repeat;
+
+    .text {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0px;
+        left: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+
+        h1 {
+            color: $primary-Color;
+            font-size: 6rem;
+            font-weight: bolder;
+            letter-spacing: 3rem;
+            text-transform: uppercase;
+        }
+
+        p {
+            color: $primary-Color;
+            font-size: 2.5rem;
+            font-weight: bold;
+            letter-spacing: 0.3rem;
+            text-transform: uppercase;
+        }
+    }
+}
+// <======== Home Section Ends ============>
+
+// <======== INFO Section Starts ============>
+
+.info {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+    .infoabout {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        padding: 0 2rem;
+
+        .details {
+            max-width: 350px;
+            height: 250px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-direction: column;
+            margin-bottom: 2rem;
+
+            h1 {
+                font-size: 3rem;
+
+                span {
+                    color: $main-Color;
+                }
+            }
+
+            p {
+                padding: 0rem 2rem;
+                text-align: center;
+            }
+
+            .buttons {
+                width: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: space-around;
+            }
+        }
+
+        .details__card {
+            max-width: 900px;
+            max-height: 400px;
+            background-image: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            border-radius: 0.5rem;
+            display: flex;
+            justify-content: center;
+            gap: 3rem;
+            padding: 2.5rem;
+            margin-bottom: 5rem;
+            box-shadow: 0 0.2rem 0.1rem rgba(0, 0, 0, 0.2), 0 0.5rem 0.4rem rgba(0, 0, 0, 0.3),
+                0 1rem 0.8rem rgba(0, 0, 0, 0.4), 0 2.6rem 1.1rem rgba(0, 0, 0, 0.4);
+
+            .image {
+                width: 100%;
+                flex: 1 1 20rem;
+                border-radius: 0.5rem;
+                overflow: hidden;
+
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+            }
+
+            .info_details {
+                max-height: 100%;
+                flex: 1 1 40rem;
+                display: flex;
+                justify-content: space-between;
+                flex-direction: column;
+
+                h1 {
+                    color: $main-Color;
+                    font-size: 2.5rem;
+                    padding: 0;
+                    letter-spacing: 0.3rem;
+                }
+
+                p {
+                    font-size: 1.2rem;
+                    line-height: 1.5rem;
+                }
+            }
+        }
+    }
+}
+
+// <======== INFO Section Ends ============>
+
+// <======== MY SKILLS Section Starts ============>
+
+.mySkills {
+    height: calc(100vh - 80px);
+    text-align: center;
+
+    .boxContainer {
+        height: 70%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: left;
+        gap: 2rem;
+        padding: 2rem 5rem;
+
+        .box {
+            height: auto;
+            width: 100%;
+            background-image: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            border-radius: 0.5rem;
+            display: flex;
+            align-items: flex-start;
+            flex-direction: column;
+            flex: 1 1 30rem;
+            padding: 2rem;
+            box-shadow: 0 0.2rem 0.1rem rgba(0, 0, 0, 0.2), 0 0.5rem 0.4rem rgba(0, 0, 0, 0.3),
+                0 1rem 0.8rem rgba(0, 0, 0, 0.4), 0 2.6rem 1.1rem rgba(0, 0, 0, 0.4);
+
+            i {
+                font-size: 2rem;
+                padding-bottom: 1rem;
+                color: $main-Color;
+            }
+
+            h1 {
+                padding-bottom: 1rem;
+            }
+        }
+    }
+}
+// <======== MY SKILLS Section Ends ============>
+
+// <======== MY PROJECTS Section STARTS ============>
+
+.projects {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 10rem;
+
+    .project__container {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+
+        .project {
+            img {
+                padding: 5rem;
+                width: 100%;
+                height: 100%;
+            }
+        }
+    }
+}
+// <======== MY PROJECTS Section Ends ============>
+
+// <======== FOOTER STARTS ============>
+footer {
+    width: 100%;
+    height: 350px;
+    background: $primary-Color;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    .content_section {
+        width: 85%;
+        display: flex;
+        padding: 4rem;
+
+        .content_box {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            flex: 1 1 20rem;
+            border-bottom: 0.2rem solid $secondy-Color;
+            padding-bottom: 5rem;
+
+            h1 {
+                font-size: 1.5rem;
+                color: $main-Color;
+            }
+
+            a {
+                padding: 0.5rem;
+
+                &:hover{
+                    color: $main-Color;
+                }
+            }
+        }
+    }
+    .copyright {
+        color: $secondy-Color;
+    }
+}
+
+// <======== FOOTER ENDS ============>
+
+
+// <======== Pojects__Page Start ============>
+.projects__page {
+    height: 100vh;
+    width: 100%;
+    background: url("../Images/projects.jpg") center center/cover;
+    background-repeat: no-repeat;
+
+    .text {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0px;
+        left: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+
+        h1 {
+            color: $primary-Color;
+            font-size: 6rem;
+            font-weight: bolder;
+            letter-spacing: 3rem;
+            text-transform: uppercase;
+        }
+
+        p {
+            color: $primary-Color;
+            font-size: 2.5rem;
+            font-weight: bold;
+            letter-spacing: 0.3rem;
+            text-transform: uppercase;
+        }
+    }
+}
+// <======== Projects__page  Ends ============>
+
+// <======== AboutME Page Start ============>
+.aboutme {
+    height: 100vh;
+    width: 100%;
+    background: url("../Images/about.jpg") center center/cover;
+    background-repeat: no-repeat;
+
+    .text {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0px;
+        left: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+
+        h1 {
+            color: $primary-Color;
+            font-size: 6rem;
+            font-weight: bolder;
+            letter-spacing: 3rem;
+            text-transform: uppercase;
+        }
+
+        p {
+            color: $primary-Color;
+            font-size: 2.5rem;
+            font-weight: bold;
+            letter-spacing: 0.3rem;
+            text-transform: uppercase;
+        }
+    }
+}
+// <======== Aboutme Page Ends ============>
+
+
+// <======== COntact Page  Start ============>
+.contact {
+    height: 100vh;
+    width: 100%;
+    background: url("../Images/contact.jpg") center center/cover;
+    background-repeat: no-repeat;
+
+    .text {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0px;
+        left: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+
+        h1 {
+            color: $primary-Color;
+            font-size: 6rem;
+            font-weight: bolder;
+            letter-spacing: 3rem;
+            text-transform: uppercase;
+        }
+
+        p {
+            color: $primary-Color;
+            font-size: 2.5rem;
+            font-weight: bold;
+            letter-spacing: 0.3rem;
+            text-transform: uppercase;
+        }
+    }
+}
+// <======== Contact Page  Ends ============>
+
+
+
+// <========= Media Querries ===============>
+
+@media screen and (max-width: $screen) {
+    .mySkills {
+        .boxContainer {
+            height: 100%;
+        }
+    }
+    // <========= PROJECTS Section Ends ==========>
+    .projects {
+        margin-bottom: 2.5rem;
+
+        .project__container {
+            .project {
+                img {
+                    padding: 2rem;
+                    margin: 0;
+                }
+            }
+        }
+    }
+    // <========= PROJECT Section Ends ==========>
+}
+
+@media screen and (max-width: $tablet) {
+    html {
+        font-size: 80%;
+    }
+
+    .home {
+        .text {
+            h1 {
+                font-size: 5rem;
+            }
+
+            p {
+                color: $primary-Color;
+                font-size: 1.5rem;
+            }
+        }
+    }
+
+    // <========Info Section ==========>
+    .info {
+        .infoabout {
+            padding: 0 2rem;
+
+            .details__card {
+                gap: 1rem;
+                padding: 1rem;
+                justify-content: space-between;
+
+                .info_details {
+                    h1 {
+                        font-size: 1.8rem;
+                    }
+
+                    p {
+                        letter-spacing: normal;
+                        font-size: 1rem;
+                    }
+                }
+            }
+        }
+    }
+    // <========Info Section =========>
+
+    // <========My skills Section =========>
+    .mySkills {
+        height: auto;
+
+        .boxContainer {
+            flex-wrap: wrap;
+            padding: 2rem;
+        }
+    }
+
+    // <========My skills Section =========>
+    // <========= PROJECTS Section Ends ==========>
+    .projects {
+        margin-bottom: 2.5rem;
+
+        .project__container {
+            .project {
+                img {
+                    padding: 1rem;
+                    margin: 0;
+                }
+            }
+        }
+    }
+    // <========= PROJECT Section Ends ==========>
+
+    // <======== FOOTER STARTS ============>
+    footer {
+        height: 300px;
+
+        .content_section {
+            width: 100%;
+            padding: 1rem;
+
+            .content_box {
+                flex: 1 1 20rem;
+                padding-bottom: 2rem;
+            }
+        }
+    }
+}
+// <======== FOOTER ENDS ============>
+
+@media screen and (max-width: $phone) {
+    html {
+        font-size: 70%;
+    }
+
+    #menu-bars {
+        display: initial;
+    }
+
+    header {
+        justify-content: space-between;
+        height: 60px;
+        padding: 1rem 1.5rem;
+
+        .navbar {
+            top: 60px;
+            position: absolute;
+            background-repeat: no-repeat;
+            object-fit: cover;
+            left: 0;
+            right: 0;
+            padding: 1rem 2rem;
+            clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+
+            &.active {
+                clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+            }
+
+            a {
+                top: 100%;
+                left: 0;
+                right: 0;
+                text-align: center;
+                display: block;
+                border-radius: 0.5rem;
+                padding: 1rem;
+                margin: 1rem 0;
+                background: #222;
+                border: 0.1rem solid $main-Color;
+            }
+
+            .contact__btn {
+                display: initial;
+                top: 100%;
+                left: 0;
+                right: 0;
+                text-align: center;
+                display: block;
+                border-radius: 0.5rem;
+                padding: 1rem;
+                margin: 1rem 0;
+                background: #222;
+                border: 0.1rem solid $main-Color;
+            }
+        }
+        .nav__btn {
+            display: none;
+        }
+    }
+
+    // <========= Home Section ==========>
+    .home {
+        .text {
+            h1 {
+                font-size: 6rem;
+                letter-spacing: 1rem;
+            }
+
+            p {
+                text-align: center;
+                color: $primary-Color;
+                font-size: 2rem;
+                letter-spacing: normal;
+            }
+        }
+    }
+    // <========= Home Section Ends ==========>
+
+    // <========= INFO Section STARTS ==========>
+
+    .info {
+        .infoabout {
+            flex-wrap: wrap;
+
+            .details {
+                justify-content: space-around;
+                height: 180px;
+
+                h1 {
+                    font-size: 2.5rem;
+                }
+            }
+
+            .details__card {
+                flex-direction: column;
+                gap: 1rem;
+
+                .image {
+                    flex: 1 1 40rem;
+                    height: 100%;
+                    width: 100%;
+
+                    img {
+                        height: 250px;
+                        object-fit: cover;
+                    }
+                }
+
+                .info_details {
+                    flex: 1 1 20rem;
+
+                    h1 {
+                        font-size: 1.2rem;
+                    }
+
+                    p {
+                        line-height: normal;
+                    }
+                }
+            }
+        }
+    }
+    // <========= INFO Section Ends ==========>
+
+    // <========= PROJECTS Section STARTS ==========>
+    .projects {
+        margin-bottom: 3rem;
+
+        .project__container {
+            .project {
+                img {
+                    padding: 0.5rem;
+                    margin: 0;
+                }
+            }
+        }
+    }
+    // <========= PROJECT Section Ends ==========>
+
+    // <======== FOOTER STARTS ============>
+    footer {
+        height: 200px;
+
+        .content_section {
+            width: 100%;
+            // padding: .5rem;
+            // flex-direction: row;
+
+            .content_box {
+                flex: 1 1 auto;
+                padding-bottom: 2rem;
+                
+                h1{
+                    font-size: 1.5rem;
+                }
+            }
+        }
+    }
+}
+// <======== FOOTER ENDS ============>
